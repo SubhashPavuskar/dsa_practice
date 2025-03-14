@@ -3,7 +3,7 @@ package com.pactice.string;
 public class CheckForAnagramASCII {
     public static void main(String[] args) {
         String str1 = "silent";
-        String str2 = "listeny";
+        String str2 = "listen";
         boolean result = checkForAnagramASCIIChar(str1,str2);
 
         if(result){
@@ -17,7 +17,7 @@ public class CheckForAnagramASCII {
         if(str1.length() != str2.length()){
             return false;
         }
-        int charCount[] = new int[256];
+        int[] charCount = new int[256];
         for (int i = 0; i < str1.length(); i++) {
             charCount[str1.charAt(i)]++;
             charCount[str2.charAt(i)]--;
